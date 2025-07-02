@@ -1,0 +1,37 @@
+<div class="container my-5">
+  <div class="card shadow-sm border-0">
+    <div class="card-header text-white rounded-top-4 d-flex align-items-center justify-content-between flex-wrap">
+      <h4 class="mb-0 fw-bold">Logged-in Users</h4>
+      <small class="fst-italic mt-2 mt-sm-0">Manage your users easily</small>
+    </div>
+   <div class="table-responsive">
+  <table class="table">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col" style="width: 5%;">#</th>
+            <th scope="col" style="width: 25%;">First Name</th>
+                    <th scope="col" style="width: 25%;">Last Name</th>
+            <th scope="col" style="width: 30%;">Email</th>
+            <th scope="col" style="width: 15%;">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users; let i = index" class="user-row" style="cursor: default;">
+            <th scope="row" class="text-secondary">{{ i + 1 }}</th>
+            <td class="fw-semibold text-name">{{ user.fname }}</td>
+                      <td class="fw-semibold text-name">{{ user.lname }}</td>
+            <td class="text-truncate" style="max-width: 250px;">{{ user.email }}</td>
+            <td>
+              <button
+                class="btn btn-sm btn-outline-danger rounded-pill px-3 mx-auto d-flex align-items-center gap-1"
+                (click)="deleteUser(user.id)"
+                title="Delete User">
+                <i class="bi bi-trash"></i> Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

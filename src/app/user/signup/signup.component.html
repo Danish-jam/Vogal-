@@ -1,0 +1,40 @@
+<div class="signup-wrapper d-flex align-items-center justify-content-center">
+  <div class="form-container glass-card p-3 p-md-4 p-lg-5 rounded-4 shadow-lg w-100">
+    <form class="signup-form" [formGroup]="newUser" (ngSubmit)="resgister()">
+      <h2 class="text-center mb-4 fw-bold text-dark">Create Account</h2>
+      <div class="row g-3">
+        <div class="col-12 col-md-6">
+          <label class="form-label">First Name</label>
+          <input type="text" class="form-control" formControlName="fname" placeholder="First name">
+        </div>
+        <div class="col-12 col-md-6">
+          <label class="form-label">Last Name</label>
+          <input type="text" class="form-control" formControlName="lname" placeholder="Last name">
+        </div>
+        <div class="col-12">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" formControlName="email" placeholder="Email address">
+          <small *ngIf="email?.invalid && email?.touched" class="text-danger d-block mt-1">
+            <span *ngIf="email?.errors?.['required']">Email is required.</span>
+            <span *ngIf="email?.errors?.['email']">Please enter a valid email address.</span>
+          </small>
+        </div>
+        <div class="col-12 position-relative">
+          <label class="form-label">Password</label>
+          <input [type]="passwordType ? 'text' : 'password'" formControlName="password"
+            class="form-control" placeholder="Enter password">
+          <i (click)="changeType()" class="bi position-absolute top-50 end-0 translate-middle-y pe-3 text-dark"
+            [ngClass]="passwordType ? 'bi-eye-slash-fill' : 'bi-eye-fill'"></i>
+          <p class="text-danger mt-2 mb-0" *ngIf="newUser.get('password')?.hasError('required')">
+            Password is required
+          </p>
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-dark w-100 py-2 fw-bold" [disabled]="!newUser.valid">
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

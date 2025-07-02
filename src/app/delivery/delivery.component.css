@@ -1,0 +1,13 @@
+ .delivery-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+  }
+
+   .col:hover .delivery-icon {
+    transform: scale(1.2);
+    color: #ffc107 !important; /* gold hover */
+  }
+
+ .delivery-circle:hover {
+    background-color: #ffcd39 !important; /* lighter yellow */
+  }

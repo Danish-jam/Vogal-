@@ -1,0 +1,21 @@
+<div class="card h-100 border-0">
+    <div class="img-overlay">
+        <div class="img-item" [ngStyle]="{'background-image': 'url(' + allProducts.img + ')'}">
+            <div class="overlay overlaybottom">
+                <ul>
+                    <li class="mx-1 pt-1"><a [routerLink]="['detaile',allProducts.id]"><i
+                                class="bi bi-info-circle"></i></a></li>
+                    <li class="mx-1 pt-1"><a href="#"><i
+                                class="bi bi-heart"></i></a></li>
+                    <!-- <li class="mx-1 pt-1"><a [routerLink]="['/product-update', allProducts.id]"><i
+                                class="bi bi-pen"></i></a></li> -->
+                    <li class="mx-1 pt-1"><a class="link" (click)="addtoCart(allProducts)"><i class="bi bi-cart-check"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="card-body text-center">
+        <div class="h6">{{ allProducts.name }}</div>
+        <p class="text-danger">${{ allProducts.price }}.00</p>
+    </div>
+</div>

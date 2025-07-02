@@ -1,0 +1,127 @@
+<nav class="navbar bg-body-white navbar-expand-lg second-navbar py-3">
+  <div class="container px-0 ms-4 m-0 mx-sm-auto mx-xl-auto w-100">
+    <a class="navbar-brand" href="#"><img
+        src="https://vogal-demo.myshopify.com/cdn/shop/files/logo-dark_80x@2x.png?v=1673416733" alt=""></a>
+    <button class="navbar-toggler me-auto border-0 position" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body ms-lg-5 ps-xxl-5 p-0">
+        <ul class="navbar-nav flex-grow-1  d-flex justify-content-center align-items-center pe-lg-3 ps-xxl-5">
+          <li class="nav-item py-2 ps-3 py-lg-0 ps-lg-0 ms-xll-5 ps-xxl-3" *ngFor="let pro of navLink">
+            <a class="nav-link fw-bold capitalize-first" routerLink="{{pro.link}}">{{pro.name}}</a>
+          </li>
+        </ul>
+        <div class="language-link d-lg-none ">
+          <h5 class="pt-2 ps-3">Language</h5>
+          <ul class="d-flex ps-3 pt-2">
+            <li><a class="fw-bold pe-1" href="#"><img
+                  src="https://vogal-demo.myshopify.com/cdn/shop/files/en.svg?v=6493546161661756346" alt=""
+                  class="me-2">ENGLISH</a></li>
+            <li class="ms-2"><a class="fw-bold pe-1" href="#"><img
+                  src="https://vogal-demo.myshopify.com/cdn/shop/files/fr.svg?v=11487395819543223824" alt=""
+                  class="me-2">FRANCE</a></li>
+            <li class="ms-2"><a class="fw-bold pe-1" href="#"><img
+                  src="https://vogal-demo.myshopify.com/cdn/shop/files/de.svg?v=130614027690144825" alt=""
+                  class="me-2">DEUTSCH</a></li>
+          </ul>
+        </div>
+        <div class="language-link d-lg-none">
+          <h5 class="pt-2 ps-3">Money</h5>
+          <ul class="d-flex ps-3 pt-2 flex-wrap">
+            <li><a class="fw-bold pe-1" href="#">USD $</a></li>
+            <li class="mx-2"><a class="fw-bold pe-1" href="#">AUD $</a></li>
+            <li class="mx-2"><a class="fw-bold pe-1" href="#">CNY $</a></li>
+            <li><a class="fw-bold pe-1" href="#">GBP $</a></li>
+            <li class="mx-2"><a class="fw-bold pe-1" href="#">INR$</a></li>
+            <li class="mx-2"><a class="fw-bold pe-1" href="#">IME $</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="icon-link me-4">
+      <ul class="d-flex m-0 p-0">
+        <li class="mx-sm-3 mx-1">
+          <!-- Trigger Button -->
+          <button type="button" class="search border-0 bg-white" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">
+            <i class="bi bi-search"></i>
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+            <div class="modal-dialog modal-fullscreen modal-dialog-centered custom-dialog">
+              <div class="modal-content slide-from-top transparent-bg">
+                <div class="modal-header border-0">
+                  <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container">
+                    <div class="mb-5 position-relative search-wrapper d-flex justify-content-center">
+                      <div class="input-group stylish-search mb-3">
+                        <input type="text" id="search" name="search" [(ngModel)]="searchitem"  (ngModelChange)="onSearchChange($event)"
+                          class="form-control search-input" placeholder="Search for products..." />
+                        <button class="btn btn-primary search-btn" type="button" (click)="searchPro()">
+                          <i class="bi bi-search"></i> Search
+                        </button>
+                      </div>
+
+                    </div>
+                    <div class="d-flex justify-content-center" *ngIf="spinner">
+                      <div class="spinner-border  text-light" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                    </div> 
+                       <h3 class="text-center mt-4 mb-3 text-white" *ngIf="!searchname">No Found Match !</h3>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">
+                      <div class="col" *ngFor="let pro of allProducts | searchPro : searchitem">
+                        <div class="custom-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                          <img [src]="pro.img" class="card-img-top product-img" alt="Product Image" />
+                          <div class="card-body d-flex flex-column p-3">
+                            <h5 class="card-title text-dark fw-semibold mb-2">
+                              {{ pro.name | countChar : 20 }}
+                            </h5>
+                            <p class="card-text text-muted small mb-2">
+                              Some quick example text to build on the card title and make up the bulk of the card’s
+                              content.
+                            </p>
+                            <a [routerLink]="['detaile',pro.id]" class="details-link">Details</a>
+                            <p class="text-danger fw-bold mb-3">${{ pro.price }}</p>
+                            <button class="btn add-to-cart-btn mt-auto" (click)="addtoCart(pro)">
+                              <i class="bi bi-cart-plus-fill me-2"></i> Add to Cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </li>
+        <li class="mx-sm-3 mx-1" *ngIf="!isLogin"><a [routerLink]="['/user/login']"><i
+              class="bi bi-person-circle"></i></a></li>
+        <li class="mx-sm-3 mx-1" *ngIf="isLogin"><a [routerLink]="['/admin/navForm']"><i
+              class="bi bi-pencil-square"></i></a></li>
+        <li class="mx-sm-3 mx-1 cart-container"><a class="cart-icon" routerLink="cart"><i
+              class="bi bi-cart-check"></i></a>
+          <span *ngIf="isLogin" class="cart-count">{{cartlength}}</span>
+        </li>
+        <li class="mx-sm-3 mx-1">
+          <button class="custom-logout-btn" *ngIf="isLogin" (click)="logout()">Logout</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

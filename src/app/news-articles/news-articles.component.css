@@ -1,0 +1,38 @@
+.card {
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.4s ease;
+  cursor: pointer;
+}
+.news-section{
+  background: rgb(240, 235, 235);
+}
+
+.card img {
+  transition: transform 0.5s ease;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card:hover {
+  box-shadow: 0 30px 40px rgba(255, 100, 150, 0.4);
+  border-radius: 15px;
+  background: linear-gradient(135deg, #ff6a95 0%, #ff3f7f 100%);
+}
+
+.card:hover img {
+  transform: scale(1.15) rotate(2deg);
+  filter: brightness(1.1);
+  border-radius: 15px;
+}
+
+.card-body {
+  transition: color 0.4s ease;
+}
+
+.card:hover .card-body {
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}

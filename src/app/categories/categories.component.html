@@ -1,0 +1,76 @@
+<div class="d-flex flex-wrap flex-lg-nowrap full-height-container">
+
+
+  <div class="container d-lg-none px-sm-0 mb-3">
+    <div class="d-flex">
+      <button type="button" class="btn beautiful-btn shadow-sm px-4 py-2 ms-auto rounded-pill bg-primary text-white"
+        data-bs-toggle="modal" data-bs-target="#exampleModal">
+        ✨ Filter Categories
+      </button>
+    </div>
+
+
+    <div class="modal fade py-5" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content glass-effect border-0 rounded-4 shadow-lg">
+          <div class="modal-header border-0">
+            <h1 class="modal-title fs-5 fw-bold text-white" id="exampleModalLabel">🌟 All Categories</h1>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-white">
+            <ul class="nav flex-column gap-3">
+              <li class="category-item rounded-3 fw-medium border-0" *ngFor="let catgr of categories; let i = index"
+                [ngClass]="{ 'active-category': selectedIndex === i }"
+                (click)="getProByCategories(catgr); selectedIndex = i">
+                <button class="custom-nav-link btn px-3 py-2 w-100 text-start text-white"
+                  [routerLink]="['/categories', catgr]" data-bs-dismiss="modal">
+                  <i class="bi bi-arrow-right-circle me-2"></i>
+                  {{ catgr.toUpperCase() }}
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Sidebar for large screens -->
+  <aside class="custom-sidebar colorful-sidebar p-4 shadow-lg rounded-3 me-lg-4 mb-4 mb-lg-0 w-100 d-none d-lg-block"
+    style="max-width: 260px;">
+    <h4 class="sidebar-title mb-4 text-white fw-semibold pb-2">All Categories</h4>
+
+    <ul class="nav flex-column gap-3">
+      <li class="category-item rounded-3 fw-medium border-0" *ngFor="let catgr of categories; let i = index"
+        [ngClass]="{ 'active-category': selectedIndex === i }" (click)="getProByCategories(catgr); selectedIndex = i">
+        <button class="custom-nav-link btn px-3 py-2 w-100 text-start text-white" [routerLink]="['/categories', catgr]">
+          <i class="bi bi-arrow-right-circle me-2"></i>
+          {{ catgr.toUpperCase() }}
+        </button>
+      </li>
+    </ul>
+  </aside>
+
+  <div class="tab-content flex-grow-1 bg-light" id="custom-tabContent">
+    <div class="tab-pane fade show active" id="product-form">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 g-4">
+        <div class="col" *ngFor="let pro of products">
+          <div class="custom-card card h-100">
+            <img [src]="pro.img" class="card-img-top" alt="Product Image">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">{{ pro.name | countChar : 10 }}</h5>
+              <p class="card-text">Some quick example text to build ...</p>
+              <a [routerLink]="['detaile', pro.id]" class="details-link">Details</a>
+              <p class="text-danger">${{ pro.price }}</p>
+              <button class="btn add-to-cart-btn mt-auto" (click)="addtoCart(pro)">
+                <i class="bi bi-cart-plus-fill me-2"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

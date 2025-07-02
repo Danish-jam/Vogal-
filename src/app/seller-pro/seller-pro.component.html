@@ -1,0 +1,11 @@
+<div class="container my-5">
+    <div class="heading text-center">
+        <div class="h1">Top Seller</div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-3">
+        <div class="col" *ngFor="let pro of allSellerPro | slice:0:4">
+           <app-product-card [allProducts]="pro"></app-product-card>
+        </div>
+    </div>
+</div>

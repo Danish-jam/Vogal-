@@ -1,0 +1,22 @@
+.table th, .table td {
+  vertical-align: middle;
+  text-align: center;
+}
+.card-header{
+    background-color: #667EEA;
+}
+.text-name{
+   color: #667EEA;
+}
+@media (max-width: 576px) {
+  .table td, .table th {
+    padding: 0.3rem;
+    font-size: 0.85rem;
+  }
+  .card-header h4 {
+    font-size: 1.25rem;
+  }
+  .card-header small {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "cart": [
+    {
+      "id": "48a2",
+      "userId": "b9b4",
+      "items": []
+    }
+  ],
+  "users": [
+    {
+      "id": "b9b4",
+      "fname": "danish",
+      "lname": "jam",
+      "email": "jam@gmail.com",
+      "password": "111111"
+    }
+  ],
+  "navbar": [
+    {
+      "id": "41",
+      "name": "Home",
+      "link": "home"
+    },
+    {
+      "id": "11",
+      "name": "Categories",
+      "link": "categories"
+    },
+    {
+      "id": "89",
+      "name": "AddProduct",
+      "link": "/admin/addpro"
+    },
+    {
+      "id": "67",
+      "name": "AllUser",
+      "link": "/admin/allusers"
+    },
+    {
+      "id": "60",
+      "name": "AllProducts",
+      "link": "allpro"
+    }
+  ],
+  "carouselData": [
+    {
+      "id": "85",
+      "bgImg": "https://vogal-demo.myshopify.com/cdn/shop/files/d1banner2_2000x.jpg?v=1679729192",
+      "heading_1": "Making",
+      "heading_2": "Bold Moves",
+      "text": "Upgrade your wardrobe with a variation of styles",
+      "bntText_1": "",
+      "bntText_2": "Shop Men",
+      "bntText_3": "Shop Women",
+      "bntLink_1": ".//afsdadfdsdf",
+      "bntLink_2": "./Nill",
+      "bntLink_3": "./hugjhgjhh"
+    },
+    {
+      "id": "44",
+      "bgImg": "https://vogal-demo.myshopify.com/cdn/shop/files/d1banner1_2000x.jpg?v=1679727513",
+      "heading_1": "Luxury Brands",
+      "heading_2": "Without Labels",
+      "text": "NEW COLLECTION",
+      "bntText_1": "Shop Now",
+      "bntText_2": "Nill",
+      "bntText_3": "Nill",
+      "bntLink_1": ".//afsdadfdsdf",
+      "bntLink_2": "./Nill",
+      "bntLink_3": "./hugjhgjhh"
+    }
+  ],
+  "categories": [
+    {
+      "id": "e5fc",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/files/sb2_560x.jpg?v=1676711299",
+      "name": "Exclusive Picks",
+      "topCategoryPro": "true",
+      "showOnHomePage": "true"
+    },
+    {
+      "id": "1e24",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/files/SB3_560x.jpg?v=1676711940",
+      "name": "New Arrivals",
+      "topCategoryPro": "true",
+      "showOnHomePage": "true"
+    },
+    {
+      "id": "43b1",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/files/SB1_560x.jpg?v=1679727714",
+      "name": "Luxe Choice",
+      "topCategoryPro": "true",
+      "showOnHomePage": "true"
+    },
+    {
+      "id": "354e",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/files/gb2.jpg?v=1679727970",
+      "name": "Tops Tees",
+      "topCategoryPro": "true",
+      "showOnHomePage": "true"
+    },
+    {
+      "id": "3126",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/files/women_afd8981d-2850-4ad1-8dea-d2ba8504ad48.jpg?v=1676805182",
+      "name": "Top-seller",
+      "topCategoryPro": "true",
+      "showOnHomePage": "true"
+    },
+    {
+      "id": "3802",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/files/shoes2_43fa6f2b-36e4-4161-a05b-0fe26f1ffe62.jpg?v=1676806657",
+      "name": "Shoes",
+      "topCategoryPro": "true",
+      "showOnHomePage": "true"
+    }
+  ],
+  "products": [
+    {
+      "id": "b89b",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/products/6_2691ea38-20e2-4ed4-9b1d-2538b04afbe8.jpg?v=1675923172",
+      "name": "Polo Solid Short Jumpsuits",
+      "price": 232,
+      "category": "Exclusive Picks",
+      "showOnHomePage": "true",
+      "qty": 1
+    },
+    {
+      "id": "a4a0",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/products/4_c32ebe14-5f94-4532-8cd8-7c9b79abf014.jpg?v=1675917784",
+      "name": "Solid Cargo Pant",
+      "price": 432,
+      "category": "New Arrivals",
+      "showOnHomePage": "true",
+      "qty": 1
+    },
+    {
+      "id": "9452",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/products/5_2ebafd66-b0ae-4ffa-b70f-6f3dc526861c.jpg?v=1676004679",
+      "name": "Long Maxi Dress",
+      "price": 324,
+      "category": "Luxe Choice",
+      "showOnHomePage": "true",
+      "qty": 1
+    },
+    {
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/products/6_e4256a4f-4f88-4ba0-b6a3-cd17447e72b4.jpg?v=1675934102",
+      "name": "Crossbody Bag with Chain Strap",
+      "price": 222,
+      "category": "New Arrivals",
+      "showOnHomePage": "true",
+      "qty": 1,
+      "id": "54f7"
+    },
+    {
+      "id": "e70c",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/products/12_06769c95-1359-470e-8c2b-fc19c77ff7a2.jpg?v=1675914818",
+      "name": "Everyday Tube Top Ribbed",
+      "price": 653,
+      "category": "Tops Tees",
+      "showOnHomePage": "true",
+      "qty": 1
+    },
+    {
+      "id": "db19",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/products/7_df663a77-4ae1-41c6-b1bd-897398218ecf.jpg?v=1675924088",
+      "name": "Luxe Faux Leather Tote",
+      "price": 454,
+      "category": "New Arrivals",
+      "showOnHomePage": "true",
+      "qty": 1
+    },
+    {
+      "id": "ccfc",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/products/1_cd0c2c53-f315-4d11-99cc-a2e1703b2cf5_1800x1800.jpg?v=1683032313",
+      "name": "Relaxed Fit Cotton Tee",
+      "price": 633,
+      "category": "New Arrivals",
+      "showOnHomePage": "true",
+      "qty": 1
+    },
+    {
+      "id": "4878",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/products/9_66c5deaf-a86e-4283-84b1-89031f40176e.jpg?v=1675930616&width=1200",
+      "name": "Bold Patterned Button-Up Shirt",
+      "price": 997,
+      "category": "New Arrivals",
+      "showOnHomePage": "true",
+      "qty": 1
+    },
+    {
+      "id": "18dc",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/products/1_6fb998b2-49df-4239-a663-f137e5935f75_1800x1800.jpg?v=1676019321",
+      "name": "Knitted Crew Neck Sweater",
+      "price": 634,
+      "category": "Exclusive Picks",
+      "showOnHomePage": "true",
+      "qty": 1
+    },
+    {
+      "id": "b4ca",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/products/3_32a199e1-3c74-41cd-93a5-afe8a4e6217c.jpg?v=1683032313&width=1200",
+      "name": "Weekend Ready Set",
+      "price": 245,
+      "category": "New Arrivals",
+      "showOnHomePage": "true",
+      "qty": 1
+    },
+    {
+      "id": "04bc",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/products/7_df663a77-4ae1-41c6-b1bd-897398218ecf.jpg?v=1675924088",
+      "name": "Monochrome Magic Dress",
+      "price": 345,
+      "category": "New Arrivals",
+      "showOnHomePage": "true",
+      "qty": null
+    },
+    {
+      "id": "d007",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/products/5_58274039-631c-4bf9-b0b1-410d5fa8edd3.jpg?v=1676019384&width=1200",
+      "name": "All-Day Comfort Shorts",
+      "price": 531,
+      "category": "New Arrivals",
+      "showOnHomePage": "true",
+      "qty": null
+    },
+    {
+      "id": "6967",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/products/4_a5cef9ac-3d4b-47e8-b12a-39778f05263e.jpg?v=1675934102",
+      "name": "Effortless Layered Look",
+      "price": 432,
+      "category": "New Arrivals",
+      "showOnHomePage": "true",
+      "qty": null
+    },
+    {
+      "id": "0858",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/products/7_12087502-a1ac-4fc7-b5a8-2324bac8de80_1800x1800.jpg?v=1675930616",
+      "name": "Statement Shoulder Bag",
+      "price": 5643,
+      "category": "New Arrivals",
+      "showOnHomePage": "true",
+      "qty": null
+    },
+    {
+      "id": "fd5e",
+      "img": "https://vogal-demo.myshopify.com/cdn/shop/products/1_f17b7405-29c8-4af8-ad8f-4046b043d4cd.jpg?v=1675920806",
+      "name": "Edgy High-Top Sneakers",
+      "price": 643,
+      "category": "New Arrivals",
+      "showOnHomePage": "true",
+      "qty": null
+    }
+  ],
+  "partner": [
+    {
+      "imgurl": "https://vogal-demo.myshopify.com/cdn/shop/files/logo4_250x.jpg?v=1673342997",
+      "showHomePge": "true",
+      "id": "4629"
+    },
+    {
+      "id": "2662",
+      "imgurl": "https://vogal-demo.myshopify.com/cdn/shop/files/logo7_250x.jpg?v=1673343970",
+      "showHomePge": "true"
+    },
+    {
+      "imgurl": "https://vogal-demo.myshopify.com/cdn/shop/files/logo1_250x.jpg?v=1673340948",
+      "showHomePge": "true",
+      "id": "ee3b"
+    },
+    {
+      "imgurl": "https://vogal-demo.myshopify.com/cdn/shop/files/logo2_250x.jpg?v=1673340966",
+      "showHomePge": "true",
+      "id": "3679"
+    },
+    {
+      "id": "fd96",
+      "imgurl": "https://vogal-demo.myshopify.com/cdn/shop/files/logo10_250x.jpg?v=1673419423",
+      "showHomePge": "true"
+    },
+    {
+      "id": "6e7e",
+      "imgurl": "https://vogal-demo.myshopify.com/cdn/shop/files/logo3_250x.jpg?v=1673341171",
+      "showHomePge": "true"
+    },
+    {
+      "id": "9f44",
+      "imgurl": "https://vogal-demo.myshopify.com/cdn/shop/files/logo1_250x.jpg?v=1673340948",
+      "showHomePge": "false"
+    },
+    {
+      "id": "dbf3",
+      "imgurl": "https://vogal-demo.myshopify.com/cdn/shop/files/logo1_250x.jpg?v=1673340948",
+      "showHomePge": "false"
+    }
+  ],
+  "ArticleVault": [
+    {
+      "id": "dc8e",
+      "imgUrl": "https://vogal-demo.myshopify.com/cdn/shop/articles/blog-img1_560x.jpg?v=1688201078",
+      "heading": "Spotlights the new role models",
+      "showHomePage": "true"
+    },
+    {
+      "id": "8722",
+      "imgUrl": "https://vogal-demo.myshopify.com/cdn/shop/articles/blog-img2_560x.jpg?v=1688201111",
+      "heading": "Match outfits with other significant",
+      "showHomePage": "true"
+    },
+    {
+      "id": "99af",
+      "imgUrl": "https://vogal-demo.myshopify.com/cdn/shop/articles/blog-img3_560x.jpg?v=1688201049",
+      "heading": "Fresh work outfits for new year",
+      "showHomePage": "true"
+    },
+    {
+      "id": "3c26",
+      "imgUrl": "https://vogal-demo.myshopify.com/cdn/shop/articles/blog-img1_560x.jpg?v=1688201078",
+      "heading": "best item",
+      "showHomePage": "false"
+    }
+  ]
+}

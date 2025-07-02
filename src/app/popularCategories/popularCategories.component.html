@@ -1,0 +1,12 @@
+<div class="categories-section mt-5 pt-4">
+    <div class="container text-center">
+        <div class="heading mb-5">
+            <div class="h2">Explore Top Categories</div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col" *ngFor="let pro of topCatgrPro | slice : 0:3">
+               <app-card [product]="pro"></app-card>
+            </div>
+        </div>
+    </div>
+</div>

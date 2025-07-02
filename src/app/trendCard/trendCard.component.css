@@ -1,0 +1,33 @@
+
+ .btn-2{
+    background-color: transparent;
+    color: black;
+    border: 1px solid rgb(36, 35, 35);
+    width: 180px;
+    height: 48px;
+    padding-top: 10px;
+ }
+ .btn-2:hover{
+    background-color: rgb(36, 35, 35);
+    color: white;
+    transition: 0.5s;
+ }
+.card .img-card{
+    overflow: hidden;
+ }
+.card img:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    border-radius: 5px;
+}
+.img-overlay{
+    position: relative;
+    display: inline-block;
+}
+.img-item{
+    height: 43vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+}

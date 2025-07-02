@@ -1,0 +1,14 @@
+<div class="product-card mt-5">
+  <div class="product-image-container">
+    <img src="{{product?.img}}" alt="Product Image" class="product-image">
+  </div>
+  <div class="product-details">
+    <h2 class="product-title">{{product?.name || 'Harvest Vase'}}</h2>
+    <p class="product-subtitle text-white ">by Studio and Friends</p>
+    <p class="product-description">
+     'Harvest Vases are a reinterpretation of peeled fruits and vegetables as functional objects. The surfaces appear to be sliced and pulled aside, allowing room for growth.
+    </p>
+      <span class="product-price text-danger">{{product?.price}}$</span>
+      <button class="buy-now w-100 mt-3">Buy Now</button>
+  </div>
+</div>

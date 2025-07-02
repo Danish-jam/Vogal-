@@ -1,0 +1,22 @@
+.footer-link {
+        color: #6c757d;
+        text-decoration: none;
+        transition: color 0.3s, border-bottom 0.3s;
+        border-bottom: 1px solid transparent;
+    }
+
+    .footer-link:hover {
+        color: #000;
+        border-bottom: 1px solid #000;
+    }
+
+    .social-icon {
+        color: #333;
+        font-size: 1.25rem;
+        margin-right: 1rem;
+        transition: color 0.3s;
+    }
+
+    .social-icon:hover {
+        color: #0d6efd;
+    }

@@ -1,0 +1,293 @@
+.carousel-control-next-icons {
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: black;
+   font-size: 19px;
+}
+
+.carousel-inner {
+   height: 83vh;
+}
+
+/* .bg-carousel-img-1{
+   
+    background-position: center;
+    background-image: url(https://vogal-demo.myshopify.com/cdn/shop/files/d1banner1_2000x.jpg?v=1679727513);
+}
+.bg-carousel-img-2{
+    background-image: url(https://vogal-demo.myshopify.com/cdn/shop/files/d1banner2_2000x.jpg?v=1679729192);
+} */
+.carousel-img {
+   height: 83vh;
+   width: 100%;
+   background-repeat: no-repeat;
+}
+
+.carousel-caption {
+   top: 20%;
+}
+
+.carousel-caption .h1 {
+   font-size: 65px;
+}
+
+section .btn-1 {
+   background-color: rgb(36, 35, 35);
+   color: white;
+   width: 180px;
+   height: 48px;
+   padding-top: 10px;
+}
+
+section .btn-1:hover {
+   background-color: #667eea;
+   color: white;
+   transition: 0.5s;
+}
+
+.text_last {
+   padding-left: 60%;
+}
+
+section .btn-2 {
+   background-color: transparent;
+   color: black;
+   border: 1px solid rgb(36, 35, 35);
+   width: 180px;
+   height: 48px;
+   padding-top: 10px;
+}
+
+section .btn-2:hover {
+   background-color: rgb(36, 35, 35);
+   color: white;
+   transition: 0.5s;
+}
+
+
+
+@media only screen and (max-width:990px) {
+   .carousel-control-next-icons {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      font-size: 19px;
+   }
+
+   .carousel-inner {
+      height: 65vh;
+   }
+
+   /* .bg-carousel-img-1{
+   
+    background-position: center;
+    background-image: url(https://vogal-demo.myshopify.com/cdn/shop/files/d1banner1_2000x.jpg?v=1679727513);
+}
+.bg-carousel-img-2{
+    background-image: url(https://vogal-demo.myshopify.com/cdn/shop/files/d1banner2_2000x.jpg?v=1679729192);
+} */
+   .carousel-img {
+      height: 65vh;
+      width: 100%;
+      background-repeat: no-repeat;
+   }
+
+   .carousel-caption {
+      top: 30%;
+   }
+
+   .carousel-caption .h1 {
+      font-size: 65px;
+   }
+
+   section .btn-1 {
+      background-color: rgb(36, 35, 35);
+      color: white;
+      width: 180px;
+      height: 48px;
+      padding-top: 10px;
+   }
+
+   section .btn-1:hover {
+      background-color: #667eea;
+      color: white;
+      transition: 0.5s;
+   }
+
+   .text_last {
+      padding-left: 0%;
+   }
+
+   section .btn-2 {
+      background-color: transparent;
+      color: black;
+      border: 1px solid rgb(36, 35, 35);
+      width: 180px;
+      height: 48px;
+      padding-top: 10px;
+   }
+
+   section .btn-2:hover {
+      background-color: rgb(36, 35, 35);
+      color: white;
+      transition: 0.5s;
+   }
+}
+
+@media only screen and (max-width:768px) {
+
+
+
+   .carousel-control-next-icons {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      font-size: 19px;
+   }
+
+   .carousel-inner {
+      height: 55vh;
+   }
+
+   /* .bg-carousel-img-1{
+  
+   background-position: center;
+   background-image: url(https://vogal-demo.myshopify.com/cdn/shop/files/d1banner1_2000x.jpg?v=1679727513);
+}
+.bg-carousel-img-2{
+   background-image: url(https://vogal-demo.myshopify.com/cdn/shop/files/d1banner2_2000x.jpg?v=1679729192);
+} */
+   .carousel-img {
+      height: 55vh;
+      width: 100%;
+      background-repeat: no-repeat;
+   }
+
+   .carousel-caption {
+      top: 25%;
+   }
+
+   .carousel-caption .h1 {
+      font-size: 45px;
+   }
+
+   section .btn-1 {
+      background-color: rgb(36, 35, 35);
+      color: white;
+      width: 180px;
+      height: 48px;
+      padding-top: 10px;
+   }
+
+   section .btn-1:hover {
+      background-color: #667eea;
+      color: white;
+      transition: 0.5s;
+   }
+
+   .text_last {
+      padding-left: 0%;
+   }
+
+   section .btn-2 {
+      background-color: transparent;
+      color: black;
+      border: 1px solid rgb(36, 35, 35);
+      width: 180px;
+      height: 48px;
+      padding-top: 10px;
+   }
+
+   section .btn-2:hover {
+      background-color: rgb(36, 35, 35);
+      color: white;
+      transition: 0.5s;
+   }
+}
+
+
+
+@media only screen and (max-width:529px) {
+
+   .carousel-control-next-icons {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      font-size: 19px;
+   }
+
+   .carousel-inner {
+      height: 45vh;
+   }
+
+   /* .bg-carousel-img-1{
+   
+    background-position: center;
+    background-image: url(https://vogal-demo.myshopify.com/cdn/shop/files/d1banner1_2000x.jpg?v=1679727513);
+}
+.bg-carousel-img-2{
+    background-image: url(https://vogal-demo.myshopify.com/cdn/shop/files/d1banner2_2000x.jpg?v=1679729192);
+} */
+   .carousel-img {
+      height: 45vh;
+      width: 100%;
+      background-repeat: no-repeat;
+   }
+
+   .carousel-caption {
+      top: 5%;
+   }
+
+   .carousel-caption .h1 {
+      font-size: 30px;
+   }
+
+   section .btn-1 {
+      background-color: rgb(36, 35, 35);
+      color: white;
+      width: 180px;
+      height: 48px;
+      padding-top: 10px;
+   }
+
+   section .btn-1:hover {
+      background-color: #667eea;
+      color: white;
+      transition: 0.5s;
+   }
+
+   .text_last {
+      padding-left: 0%;
+   }
+
+   section .btn-2 {
+      background-color: transparent;
+      color: black;
+      border: 1px solid rgb(36, 35, 35);
+      width: 180px;
+      height: 48px;
+      padding-top: 10px;
+   }
+
+   section .btn-2:hover {
+      background-color: rgb(36, 35, 35);
+      color: white;
+      transition: 0.5s;
+   }
+}

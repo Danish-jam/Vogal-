@@ -1,0 +1,14 @@
+.logo-card {
+  height: 80px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(60%);
+}
+
+.logo-card:hover {
+  transform: scale(1.05);
+  filter: none;
+  background-color: #e9f0ff;
+}
+.logo-section{
+   background: rgb(240, 235, 235);
+}

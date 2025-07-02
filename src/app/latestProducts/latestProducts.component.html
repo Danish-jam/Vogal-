@@ -1,0 +1,12 @@
+<div class="container my-5">
+    <div class="heading text-center">
+        <h1>New Arrivals</h1>
+        <p>We have your occasion covered</p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-3">
+        <div class="col" *ngFor="let pro of arrivalPro | slice:0:8">
+          <app-product-card [allProducts]="pro"></app-product-card>
+        </div>
+    </div>
+</div>

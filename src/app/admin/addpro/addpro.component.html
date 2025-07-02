@@ -1,0 +1,231 @@
+<div class="container d-lg-none px-sm-0">
+  <div class="d-flex">
+    <button type="button" class="btn btn-gradient ms-auto text-white fw-semibold rounded-pill px-4 py-2 shadow-sm"
+      data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <i class="bi bi-ui-checks me-2"></i> Select Form
+    </button>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 shadow-lg rounded-4"
+        style="background: linear-gradient(to right, #667eea, #764ba2); color: white;">
+        <div class="modal-header border-0">
+          <h1 class="modal-title fs-4 fw-bold mb-3" id="exampleModalLabel">🌟Add Your Products</h1>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body fs-5">
+          <ul class="nav flex-column gap-3">
+
+            <li class="nav-item" *ngFor="let item of sideBarData" (click)="selectedItem = item.name">
+              <button class="custom-nav-link">
+                <i class="{{item.icon}} me-2"></i> {{item.name}}
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="d-flex flex-wrap flex-lg-nowrap">
+  <aside class="custom-sidebar px-4 shadow-lg d-none d-lg-block">
+    <h4 class="sidebar-title my-4">Add Your Products</h4>
+    <ul class="nav flex-column gap-3">
+
+      <li class="nav-item" *ngFor="let item of sideBarData" (click)="selectedItem = item.name">
+        <button class="custom-nav-link">
+          <i class="{{item.icon}} me-2"></i> {{item.name}}
+        </button>
+      </li>
+    </ul>
+  </aside>
+
+  <div class="tab-content flex-grow-1 p-4 bg-light">
+    <!-- Category Form -->
+    <div class="tab-pane fade show active" *ngIf="selectedItem == 'Add More Catgories'">
+      <form [formGroup]="PopularCatgrForm" (ngSubmit)="submitcatgrPro()" class="product-form">
+        <h4 class="form-title">Explore More Category</h4>
+        <div class="mb-3">
+          <label for="image">Image URL</label>
+          <input type="text" id="image" formControlName="img" class="form-control" placeholder="Enter image URL" />
+        </div>
+        <div class="mb-3">
+          <label for="heading">Category Name</label>
+          <input type="text" id="heading" formControlName="name" class="form-control" placeholder="Enter heading" />
+        </div>
+        <div class="mb-3">
+          <label for="inputCategory">Show Top CategoryPro</label>
+          <select id="inputCategory" class="form-select" formControlName="topCategoryPro">
+            <option value="" disabled selected>-- Select Condition --</option>
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="inputCategory">Show Home Page</label>
+          <select id="inputCategory" class="form-select" formControlName="showOnHomePage">
+            <option value="" disabled selected>-- Select Condition --</option>
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn2 w-100">Submit</button>
+      </form>
+    </div>
+
+    <!-- Product Form -->
+
+    <div *ngIf="selectedItem == 'Add New Product'">
+      <form [formGroup]="productForm" (ngSubmit)="AddnewPro()" class="product-form">
+        <h4 class="form-title text-center">Add Product</h4>
+        <div class="mb-3">
+          <label for="img">Image URL</label>
+          <input type="text" id="bgimg1" class="form-control" placeholder="Enter image Url......"
+            formControlName="img" />
+        </div>
+        <div class="mb-3">
+          <label for="name">Product Heading</label>
+          <input type="text" id="headingPro" class="form-control" placeholder="Enter Product Heading...."
+            formControlName="name" />
+        </div>
+        <div class="mb-3">
+          <label for="price">Price</label>
+          <input type="number" id="price" class="form-control" placeholder="Enter Price...." formControlName="price" />
+        </div>
+        <div class="mb-3">
+          <label for="showOnHomePage">Show Home Page</label>
+          <select id="showOnHomePage" class="form-select" formControlName="showOnHomePage">
+            <option value="" disabled selected>-- Select Condition --</option>
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label for="category">Category</label>
+          <select id="category" class="form-select text-black" formControlName="category">
+            <option value="" disabled selected>Select Category...</option>
+            <option *ngFor="let category of categories" [value]="category.name">{{ category.name }}</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn2 w-100">Submit Product</button>
+      </form>
+    </div>
+
+
+    <!-- Logo Image Form -->
+
+    <div class="" id="logoimg-form" *ngIf="selectedItem == 'Add Logo Partner'">
+      <form class="custom-form" [formGroup]="logForm" (ngSubmit)="addlogo()">
+        <h4 class="form-title">Add Product Image</h4>
+        <label for="imageUrl">Image URL</label>
+        <input type="text" id="imageUrl" formControlName="imgurl" class="form-control"
+          placeholder="https://example.com/image.jpg" />
+        <label for="showHomePge">Show Home Page</label>
+        <select id="showHomePge" class="form-select" formControlName="showHomePge">
+          <option value="" disabled selected>-- Select Condition --</option>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+        <button type="submit" class="submit-btn mt-4 w-100">
+          <i class="bi bi-check2-circle me-2"></i> Save
+        </button>
+      </form>
+
+      <div class="container mt-4">
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover align-middle shadow-sm">
+            <thead class="table-primary text-center">
+              <tr>
+                <th style="width: 10%;">#</th>
+                <th style="width: 40%;">Name</th>
+                <th style="width: 20%;">Show HomePage</th>
+                <th style="width: 40%;">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <tr *ngFor="let item of alllogo ; let i = index">
+                <td>{{ i + 1 }}</td>
+                <!-- | countChar : 20  -->
+                <td class="text-start">{{ item.imgurl | slice:0:25  }}...</td>
+                <td>{{ item.showHomePge }}</td>
+                <td>
+                  <div class="d-flex flex-column flex-sm-row justify-content-center gap-2">
+                    <button class="btn btn-sm btn-warning w-100 w-sm-auto" (click)="editItem(item)">
+                      <i class="bi bi-pencil-square"></i> Edit
+                    </button>
+                    <button class="btn btn-sm btn-danger w-100 w-sm-auto" (click)="deleteItem(item.id)">
+                      <i class="bi bi-trash"></i> Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- News & Article Form -->
+
+    <div class="" id="News&Article-form" *ngIf="selectedItem == 'Add Article Product'">
+      <form [formGroup]="ArticleForm" (ngSubmit)="submitArtilePro()" class="styled-form">
+        <h4 class="form-title">Add NewsArticles Product</h4>
+        <div class="input-group">
+          <label for="image">image Url</label>
+          <input type="text" id="image" class="rounded-3" formControlName="imgUrl" placeholder="Enter image Url..." />
+        </div>
+        <div class="input-group">
+          <label for="heading">Enter Heading</label>
+          <input type="heading" id="heading" class="rounded-3" formControlName="heading"
+            placeholder="Enter Heading..." />
+        </div>
+        <label for="showHomePge">Show Home Page</label>
+        <select id="showHomePge" class="form-select" formControlName="showHomePage">
+          <option value="" disabled selected>-- Select Condition --</option>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+        <div class="submit-wrapper">
+          <button type="submit" class="submit-btn w-100 mt-3">Submit</button>
+        </div>
+      </form>
+
+
+      <div class="container mt-4">
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover align-middle shadow-sm">
+            <thead class="table-primary text-center">
+              <tr>
+                <th style="width: 30%;">image Url</th>
+                <th style="width: 20%;">Heading</th>
+                <th style="width: 10%;">Show HomePage</th>
+                <th style="width: 40%;">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <tr *ngFor="let item of NewsArticles">
+                <!-- | countChar : 20  -->
+                <td class="text-start">{{ item.imgUrl | slice:0:25  }}...</td>
+                <td class="text-start">{{ item.heading | slice:0:15  }}...</td>
+                <td>{{ item.showHomePage }}</td>
+                <td>
+                  <div class="d-flex flex-column flex-sm-row justify-content-center gap-2">
+                    <button class="btn btn-sm btn-warning w-100 w-sm-auto" (click)="editArticlePro(item)">
+                      <i class="bi bi-pencil-square"></i> Edit
+                    </button>
+                    <button class="btn btn-sm btn-danger w-100 w-sm-auto" (click)="deleteArticlePro(item.id)">
+                      <i class="bi bi-trash"></i> Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
